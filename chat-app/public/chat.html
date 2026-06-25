@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Chat App</title>
+        <link rel="icon" href="/img/favicon.png">
+        <link rel="stylesheet" href="/css/styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header class="page-header chat-header">
+            <div class="page-header__brand">Chat App</div>
+            <div class="page-header__actions">
+                <button id="leave-room" class="button button--logout" type="button">Leave Room</button>
+                <button id="end-room" class="button button--logout" type="button">End Room</button>
+                <a id="auth-button" class="button button--login" href="/login">Login</a>
+            </div>
+        </header>
+
+        <div class="chat">
+            <div id="sidebar" class="chat__sidebar"></div>
+            <div class="chat__main">
+                <div id="messages" class="chat__messages"></div>
+
+                <div class="compose">
+                    <form id="message-form" action="">
+                        <input name="message" type="text" placeholder="Message" required autocomplete="off">
+                        <button>Send</button>
+                    </form>
+                    <div class="compose-actions">
+                        <button id="send-location" class="button button--secondary" type="button">Send location</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script id="message-template" type="text/html">
+            <div class="message {{messageClass}}">
+                <p>
+                    <span class="message__name">{{username}}</span>
+                    <span class="message__meta">{{createdAt}}</span>
+                </p>
+                <p>{{message}}</p>
+            </div>
+        </script>
+
+        <script id="location-message-template" type="text/html">
+            <div class="message {{messageClass}}">
+                <p>
+                    <span class="message__name">{{username}}</span>
+                    <span class="message__meta">{{createdAt}}</span>
+                </p>
+                <p><a href="{{url}}" target="_blank">My current location</a></p>
+            </div>
+        </script>
+
+        <script id="sidebar-template" type="text/html">
+            <h2 class="room-title">{{room}}</h2>
+            {{#ownerName}}
+                <p class="room-owner">Room owner: {{ownerName}}</p>
+            {{/ownerName}}
+            <h3 class="list-title">Users</h3>
+            <ul class="users">
+                {{#users}}
+                    <li>
+                        <span class="avatar">{{initials}}</span>
+                        <span class="user-dot online"></span>
+                        <span class="username-text">{{username}}</span>
+                    </li>
+                {{/users}}
+            </ul>
+        </script>
+
+        <script id="typing-template" type="text/html">
+            {{#typers}}
+              <div class="typing-item">{{username}} is typing...</div>
+            {{/typers}}
+        </script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.8.0/qs.min.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="/js/chat.js"></script>
+        <script src="/js/auth.js"></script>
+    </body>
+</html>

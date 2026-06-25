@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Chat App</title>
+        <link rel="icon" href="/img/favicon.png">
+        <link rel="stylesheet" href="/css/styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header class="page-header">
+            <div class="page-header__brand">Chat App</div>
+            <div class="page-header__actions">
+                <a id="auth-button" class="button button--login" href="/login">Login</a>
+            </div>
+        </header>
+
+        <div class="centered-form">
+            <div class="centered-form__box">
+                <h1>Join</h1>
+                <form action="/chat.html">
+                    <label for="username">Display name</label>
+                    <input type="text" name="username" placeholder="Display name" required>
+                    <label for="room">Room</label>
+                    <input type="text" name="room" placeholder="Room" required>
+                    <button type="submit">Join</button>
+                </form>
+            </div>
+        </div>
+
+        <script src="/js/auth.js"></script>
+    </body>
+</html>

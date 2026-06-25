@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="600" viewBox="0 0 1600 600" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="g" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0b0b0d"/>
+      <stop offset="100%" stop-color="#20232a"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#g)" />
+
+  <!-- Simple doodle-style speech bubbles and lines to emulate the attached artwork -->
+  <g fill="none" stroke="#e6eef3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.14">
+    <path d="M120 80c40-20 80-20 120 0 24 12 36 28 40 44 6 28-12 56-48 64-36 8-72-6-96-16" />
+    <path d="M420 48c30-18 60-18 90 0 18 9 27 21 30 33 5 21-9 42-36 48-27 6-54-4-72-12" />
+    <path d="M760 110c36-18 72-18 108 0 20 9 30 21 34 34 7 24-10 48-40 56-30 8-60-2-80-12" />
+    <path d="M1100 60c28-16 56-16 84 0 16 8 24 18 28 28 5 18-8 36-30 42-22 6-44-2-60-10" />
+
+    <rect x="220" y="360" width="220" height="120" rx="18"/> 
+    <rect x="540" y="320" width="260" height="140" rx="14"/>
+    <rect x="920" y="380" width="200" height="100" rx="12"/>
+
+    <path d="M200 200c18-8 36-8 54 0"/>
+    <path d="M260 220c10-6 20-6 30 0"/>
+    <path d="M1400 180c10-6 20-6 30 0"/>
+
+    <!-- little stars and swirls -->
+    <path d="M145 520c6-6 12-6 18 0"/>
+    <path d="M155 510c3-8 8-12 14-12"/>
+  </g>
+
+  <!-- faint frame dots -->
+  <g fill="#e6eef3" opacity="0.04">
+    <circle cx="50" cy="50" r="2" />
+    <circle cx="120" cy="80" r="2" />
+    <circle cx="300" cy="40" r="2" />
+    <circle cx="480" cy="90" r="2" />
+    <circle cx="820" cy="60" r="2" />
+    <circle cx="1200" cy="70" r="2" />
+    <circle cx="1450" cy="90" r="2" />
+  </g>
+</svg>

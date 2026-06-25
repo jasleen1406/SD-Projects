@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Chat App Login</title>
+        <link rel="icon" href="/img/favicon.png">
+        <link rel="stylesheet" href="/css/styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header class="page-header">
+            <div class="page-header__brand">Chat App</div>
+        </header>
+
+        <div class="centered-form">
+            <div class="auth-columns">
+                <div class="auth-box">
+                    <h1>Sign In</h1>
+                    <form action="/login" method="POST" class="auth-form">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Email address" required>
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" placeholder="Password" required>
+                        <button type="submit">Login</button>
+                    </form>
+                    <!-- Google login disabled in UI -->
+                </div>
+
+                <div class="auth-box">
+                    <h1>Create Account</h1>
+                    <form action="/register" method="POST" class="auth-form">
+                        <label for="register-username">Display name</label>
+                        <input type="text" name="username" id="register-username" placeholder="Display name" required>
+                        <label for="register-email">Email</label>
+                        <input type="email" name="email" id="register-email" placeholder="Email address" required>
+                        <label for="register-password">Password</label>
+                        <input type="password" name="password" id="register-password" placeholder="Password" required>
+                        <button type="submit">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script src="/js/auth.js"></script>
+    </body>
+</html>
