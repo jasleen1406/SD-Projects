@@ -75,14 +75,4 @@ Each algorithm uses a different approach to finding the shortest path between tw
 - Run `python3 run.pyw` if on Linux or Mac
 - Run `python run.pyw` if on Windows
 
-## Command Line Arguments
-1. `--cell-size`
-Usage: `python run.pyw --cell-size:<int>`
-
-## Contributing
-This project is open to contributions, bug reports, and suggestions. If you've found a bug or have a suggestion, please open an issue.
-
-# License
-This project is licensed under the MIT License.
-
 Enjoy visualizing pathfinding algorithms!
